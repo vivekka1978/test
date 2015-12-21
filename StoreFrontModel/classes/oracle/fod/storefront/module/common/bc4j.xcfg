@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODCategoryAM">
+      <AppModuleConfig name="FODCategoryAMLocal" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODCategoryAM" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODCategoryAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="FODCategoryAMShared" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODCategoryAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODCategoryAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM">
+      <AppModuleConfig name="FODShoppingCartAMLocal" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="FODShoppingCartAMShared" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.TestAM"/>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODProductAM">
+      <AppModuleConfig name="FODProductAMLocal" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODProductAM" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODProductAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="FODProductAMShared" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODProductAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODProductAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODSupplierAM">
+      <AppModuleConfig name="FODSupplierAMLocal" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODSupplierAM" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODSupplierAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="FODSupplierAMShared" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODSupplierAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODSupplierAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODCheckoutAM">
+      <AppModuleConfig name="FODCheckoutAMLocal" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODCheckoutAM" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODCheckoutAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="FODCheckoutAMShared" jbo.project="oracle.fod.storefront.StoreFrontModel" ApplicationName="oracle.fod.storefront.module.FODCheckoutAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODCheckoutAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

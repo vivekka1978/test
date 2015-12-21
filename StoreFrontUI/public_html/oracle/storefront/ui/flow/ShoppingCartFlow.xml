@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="ShoppingCartFlow">
+    <default-activity>init</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="ShoppingCart">
+      <page>/oracle/storefront/ui/pages/ShoppingCart.jspx</page>
+    </view>
+    <task-flow-return id="Shop">
+      <outcome>
+        <name>shop</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="Checkout">
+      <outcome>
+        <name>checkout</name>
+      </outcome>
+    </task-flow-return>
+    <method-call id="init">
+      <method>#{bindings.init.execute}</method>
+      <outcome>
+        <fixed-outcome>init</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>ShoppingCart</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>shop</from-outcome>
+        <to-activity-id>Shop</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>checkout</from-outcome>
+        <to-activity-id>Checkout</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>init</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>init</from-outcome>
+        <to-activity-id>ShoppingCart</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

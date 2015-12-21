@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="storefrontuiBundle" value="#{adfBundle['oracle.fod.storefront.ui.StoreFrontUIBundle']}"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="SupplierUpdate.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:button text="#{storefrontuiBundle.CANCEL}" id="b1" action="cancel" immediate="true"/>
+                <af:button text="#{storefrontuiBundle.SAVE}" id="b2" action="save"/>
+                <af:panelFormLayout id="pfl1">
+                    <af:inputText value="#{bindings.SupplierName.inputValue}"
+                                  label="#{bindings.SupplierName.hints.label}"
+                                  required="#{bindings.SupplierName.hints.mandatory}"
+                                  columns="#{bindings.SupplierName.hints.displayWidth}"
+                                  maximumLength="#{bindings.SupplierName.hints.precision}"
+                                  shortDesc="#{bindings.SupplierName.hints.tooltip}" id="it1">
+                        <f:validator binding="#{bindings.SupplierName.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                                  required="#{bindings.Email.hints.mandatory}"
+                                  columns="#{bindings.Email.hints.displayWidth}"
+                                  maximumLength="#{bindings.Email.hints.precision}"
+                                  shortDesc="#{bindings.Email.hints.tooltip}" id="it2">
+                        <f:validator binding="#{bindings.Email.validator}"/>
+                    </af:inputText>
+                    <af:selectOneChoice value="#{bindings.SupplierStatus.inputValue}"
+                                        label="#{bindings.SupplierStatus.label}"
+                                        required="#{bindings.SupplierStatus.hints.mandatory}"
+                                        shortDesc="#{bindings.SupplierStatus.hints.tooltip}" id="soc1">
+                        <f:selectItems value="#{bindings.SupplierStatus.items}" id="si1"/>
+                        <f:validator binding="#{bindings.SupplierStatus.validator}"/>
+                    </af:selectOneChoice>
+                    <af:inputText value="#{bindings.CreatedBy.inputValue}" label="#{bindings.CreatedBy.hints.label}"
+                                  required="#{bindings.CreatedBy.hints.mandatory}"
+                                  columns="#{bindings.CreatedBy.hints.displayWidth}"
+                                  maximumLength="#{bindings.CreatedBy.hints.precision}"
+                                  shortDesc="#{bindings.CreatedBy.hints.tooltip}" id="it3">
+                        <f:validator binding="#{bindings.CreatedBy.validator}"/>
+                    </af:inputText>
+                </af:panelFormLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="testflow_testflow_initPageDef"
+                Package="oracle.storefront.ui.flow" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="init" RequiresUpdateModel="true" Action="invokeMethod" MethodName="init"
+                  IsViewObjectMethod="false" DataControl="FODCheckoutAMDataControl"
+                  InstanceName="data.FODCheckoutAMDataControl.dataProvider"
+                  ReturnName="data.FODCheckoutAMDataControl.methodResults.init_FODCheckoutAMDataControl_dataProvider_init_result"/>
+  </bindings>
+</pageDefinition>

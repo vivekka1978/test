@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.test.TestAM">
+      <AppModuleConfig name="TestAMLocal" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="oracle.fod.storefront.module.test.TestAM" jbo.project="oracle.fod.storefront.StoreFrontModel">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.test.TestAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="TestAMShared" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="oracle.fod.storefront.module.test.TestAM" jbo.project="oracle.fod.storefront.StoreFrontModel">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.test.TestAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

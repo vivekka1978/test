@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<Entity
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="SupplierEO"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge"
+   DBObjectType="table"
+   DBObjectName="SUPPLIERS"
+   AliasName="SupplierEO"
+   BindingStyle="OracleName"
+   RowClass="oracle.fod.storefront.entity.SupplierEOImpl">
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true"/>
+   </DesignTime>
+   <Attribute
+      Name="SupplierId"
+      Precision="15"
+      Scale="0"
+      ColumnName="SUPPLIER_ID"
+      SQLType="NUMERIC"
+      Type="oracle.jbo.domain.DBSequence"
+      ColumnType="NUMBER"
+      TableName="SUPPLIERS"
+      PrimaryKey="true"
+      IsUpdateable="while_insert"
+      DefaultValue="@0"
+      Domain="oracle.jbo.domain.DBSequence"
+      RetrievedOnInsert="true">
+   </Attribute>
+   <Attribute
+      Name="SupplierName"
+      IsNotNull="true"
+      Precision="120"
+      ColumnName="SUPPLIER_NAME"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="SUPPLIERS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="120" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SupplierStatus"
+      IsNotNull="true"
+      Precision="30"
+      ColumnName="SUPPLIER_STATUS"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="SUPPLIERS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="PhoneNumber"
+      Precision="255"
+      ColumnName="PHONE_NUMBER"
+      SQLType="VARCHAR"
+      Type="oracle.fod.storefront.common.PhoneNumber"
+      ColumnType="VARCHAR2"
+      TableName="SUPPLIERS"
+      Domain="oracle.fod.storefront.PhoneNumber">
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Email"
+      Precision="255"
+      ColumnName="EMAIL"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="SUPPLIERS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="255" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="UiSkin"
+      Precision="60"
+      ColumnName="UI_SKIN"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="SUPPLIERS" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      Precision="60"
+      ColumnName="CREATED_BY"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="SUPPLIERS"
+      IsUpdateable="while_insert"
+      HistoryColumn="UserHistory">
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      IsNotNull="true"
+      ColumnName="CREATION_DATE"
+      SQLType="DATE"
+      Type="java.sql.Timestamp"
+      ColumnType="DATE"
+      TableName="SUPPLIERS"
+      IsUpdateable="while_insert"
+      HistoryColumn="DateHistory">
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      Precision="60"
+      ColumnName="LAST_UPDATED_BY"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="SUPPLIERS"
+      DefaultValue="anonymous"
+      HistoryColumn="UserHistory">
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      ColumnName="LAST_UPDATE_DATE"
+      SQLType="DATE"
+      Type="java.sql.Timestamp"
+      ColumnType="DATE"
+      TableName="SUPPLIERS"
+      HistoryColumn="DateHistory">
+   </Attribute>
+   <Attribute
+      Name="ObjectVersionId"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="OBJECT_VERSION_ID"
+      SQLType="NUMERIC"
+      Type="java.lang.Long"
+      ColumnType="NUMBER"
+      TableName="SUPPLIERS"
+      HistoryColumn="VersionHistory">
+   </Attribute>
+   <Key
+      Name="SuppliersPk"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="SUPPLIERS_PK"/>
+      </DesignTime>
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.entity.SupplierEO.SupplierId" />
+      </AttrArray>
+   </Key>
+</Entity>

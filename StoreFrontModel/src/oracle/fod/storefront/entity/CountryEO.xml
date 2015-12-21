@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="CountryEO"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge"
+   DBObjectType="table"
+   DBObjectName="COUNTRY_CODES"
+   AliasName="CountryEO"
+   BindingStyle="OracleName" >
+   <Attribute
+      Name="IsoCountryCode"
+      IsNotNull="true"
+      Precision="2"
+      ColumnName="ISO_COUNTRY_CODE"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="COUNTRY_CODES"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="2" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CountryName"
+      Precision="100"
+      ColumnName="COUNTRY_NAME"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="COUNTRY_CODES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Language"
+      IsNotNull="true"
+      Precision="30"
+      ColumnName="LANGUAGE"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="COUNTRY_CODES"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="SourceLang"
+      Precision="30"
+      ColumnName="SOURCE_LANG"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="COUNTRY_CODES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="30" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      Precision="60"
+      ColumnName="CREATED_BY"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="COUNTRY_CODES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      IsNotNull="true"
+      ColumnName="CREATION_DATE"
+      SQLType="DATE"
+      Type="java.sql.Timestamp"
+      ColumnType="DATE"
+      TableName="COUNTRY_CODES" >
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      Precision="60"
+      ColumnName="LAST_UPDATED_BY"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="COUNTRY_CODES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      ColumnName="LAST_UPDATE_DATE"
+      SQLType="DATE"
+      Type="java.sql.Timestamp"
+      ColumnType="DATE"
+      TableName="COUNTRY_CODES" >
+   </Attribute>
+   <Attribute
+      Name="ObjectVersionId"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="OBJECT_VERSION_ID"
+      SQLType="NUMERIC"
+      Type="java.lang.Long"
+      ColumnType="NUMBER"
+      TableName="COUNTRY_CODES" >
+   </Attribute>
+   <Key
+      Name="CountryCodesPk"
+      PrimaryKey="true" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.entity.CountryEO.IsoCountryCode" />
+         <Item Value="oracle.fod.storefront.entity.CountryEO.Language" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="COUNTRY_CODES_PK" />
+      </DesignTime>
+   </Key>
+</Entity>

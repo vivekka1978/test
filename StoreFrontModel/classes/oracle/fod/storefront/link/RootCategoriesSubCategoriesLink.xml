@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+
+<ViewLink
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="RootCategoriesSubCategoriesLink"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge"
+   EntityAssociation="oracle.fod.storefront.assoc.ProductCategoriesSubProductCategoriesAssoc" >
+   <Properties >
+      <SchemaBasedProperties >
+         <LABEL
+            ResId="oracle.fod.storefront.link.RootCategoriesSubCategoriesLink_LABEL" >
+         </LABEL>
+      </SchemaBasedProperties>
+   </Properties>
+   <ViewLinkDefEnd
+      Name="RootCategory"
+      Cardinality="1"
+      Source="true"
+      Owner="oracle.fod.storefront.uiview.RootCategoryVO" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.uiview.RootCategoryVO.CategoryId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="RootCategory" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+   <ViewLinkDefEnd
+      Name="SubCategory"
+      Cardinality="-1"
+      Owner="oracle.fod.storefront.uiview.SubCategoryVO" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.uiview.SubCategoryVO.ParentCategoryId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="SubCategory" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+   <ResourceBundle >
+      <PropertiesBundle
+         PropertiesFile="oracle.fod.storefront.StoreFrontModelBundle" >
+      </PropertiesBundle>
+   </ResourceBundle>
+</ViewLink>

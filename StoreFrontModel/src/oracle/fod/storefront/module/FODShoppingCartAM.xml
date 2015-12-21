@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FODShoppingCartAM"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true"
+  ComponentClass="oracle.fod.storefront.module.FODShoppingCartAMImpl"
+  ComponentInterface="oracle.fod.storefront.module.common.FODShoppingCartAM">
+  <DesignTime>
+    <Attr Name="_superClassName" Value="oracle.fod.storefront.module.BaseApplicationModuleImpl"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="oracle.fod.storefront.module.FODShoppingCartAM_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="ShoppingCart1"
+    ViewObjectName="oracle.fod.storefront.uiview.ShoppingCartVO"/>
+  <ViewUsage
+    Name="ShoppingCartItem1"
+    ViewObjectName="oracle.fod.storefront.uiview.ShoppingCartItemVO"/>
+  <ViewLinkUsage
+    Name="OrderItemsOrdersFkLink1"
+    ViewLinkObjectName="oracle.fod.storefront.link.OrderItemsOrdersFkLink"
+    SrcViewUsageName="oracle.fod.storefront.module.FODShoppingCartAM.ShoppingCart1"
+    DstViewUsageName="oracle.fod.storefront.module.FODShoppingCartAM.ShoppingCartItem1"
+    Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="addItemToCart"
+      MethodName="addItemToCart">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="productId"
+        Type="java.lang.Long"/>
+    </Method>
+    <Method
+      Name="init"
+      MethodName="init">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientInterface>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.fod.storefront.StoreFrontModelBundle"/>
+  </ResourceBundle>
+</AppModule>

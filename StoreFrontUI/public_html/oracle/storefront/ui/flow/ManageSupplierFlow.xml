@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+    <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="ManageSupplierFlow">
+    <default-activity>SupplierUpdate</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="SupplierUpdate">
+      <page>/oracle/storefront/ui/pages/supplier/SupplierUpdate.jspx</page>
+    </view>
+    <task-flow-return id="Save">
+      <outcome>
+        <name>done</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="Cancel">
+      <outcome>
+        <name>done</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__1">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>cancel</from-outcome>
+        <to-activity-id>Cancel</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>SupplierUpdate</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>save</from-outcome>
+        <to-activity-id>Save</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

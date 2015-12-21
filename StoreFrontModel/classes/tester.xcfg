@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.test.TestAM">
+      <AppModuleConfig name="150D3F0DAE9" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.test.TestAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="TestAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.test.TestAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.test.common.TestAM"/>
+         <Custom ns0:LastUsedConfiguration="TestAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="1517FE7F285" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.test.TestAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="TestAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.test.TestAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.test.common.TestAM"/>
+         <Custom ns0:LastUsedConfiguration="TestAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODCategoryAM">
+      <AppModuleConfig name="1517FC5BA1E" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODCategoryAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODCategoryAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODCategoryAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODCategoryAM"/>
+         <Custom ns0:LastUsedConfiguration="FODCategoryAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM">
+      <AppModuleConfig name="15114107372" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODShoppingCartAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODShoppingCartAM"/>
+         <Custom ns0:LastUsedConfiguration="FODShoppingCartAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="151194A5363" JDBCName="fod" DeployPlatform="LOCAL" jbo.project="oracle.fod.storefront.StoreFrontModel" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="FODShoppingCartAMLocal" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" DBconnection="java:comp/env/jdbc/fodDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODShoppingCartAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="151195BF978" JDBCName="fod" DeployPlatform="LOCAL" jbo.project="oracle.fod.storefront.StoreFrontModel" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="FODShoppingCartAMLocal" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" DBconnection="java:comp/env/jdbc/fodDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODShoppingCartAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="1511961EA60" JDBCName="fod" DeployPlatform="LOCAL" jbo.project="oracle.fod.storefront.StoreFrontModel" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="FODShoppingCartAMLocal" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" DBconnection="java:comp/env/jdbc/fodDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODShoppingCartAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="151196201C6" JDBCName="fod" DeployPlatform="LOCAL" jbo.project="oracle.fod.storefront.StoreFrontModel" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="FODShoppingCartAMLocal" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" DBconnection="java:comp/env/jdbc/fodDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODShoppingCartAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="1517FEEE7DA" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODShoppingCartAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODShoppingCartAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODShoppingCartAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODShoppingCartAM"/>
+         <Custom ns0:LastUsedConfiguration="FODShoppingCartAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.test.TestAM">
+      <AppModuleConfig name="15113042A9C" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.test.TestAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="TestAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.test.TestAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.test.common.TestAM"/>
+         <Custom ns0:LastUsedConfiguration="TestAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="15119526610" JDBCName="fod" DeployPlatform="LOCAL" jbo.project="oracle.fod.storefront.StoreFrontModel" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="TestAMLocal" ApplicationName="oracle.fod.storefront.module.test.TestAM" DBconnection="java:comp/env/jdbc/fodDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.test.TestAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.test.common.TestAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODProductAM">
+      <AppModuleConfig name="151B31F50B0" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODProductAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODProductAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODProductAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODProductAM"/>
+         <Custom ns0:LastUsedConfiguration="FODProductAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODSupplierAM">
+      <AppModuleConfig name="1517FF75D9A" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODSupplierAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODSupplierAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODSupplierAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODSupplierAM"/>
+         <Custom ns0:LastUsedConfiguration="FODSupplierAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODCheckoutAM">
+      <AppModuleConfig name="151B8BAB81E" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODCheckoutAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODCheckoutAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.fod.storefront.module.FODCheckoutAM"/>
+         <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODCheckoutAM"/>
+         <Custom ns0:LastUsedConfiguration="FODCheckoutAMLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/fodDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

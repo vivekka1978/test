@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SubcategoriesToProducts"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="oracle.fod.storefront.link.SubcategoriesToProducts_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="SubCategory"
+    Cardinality="1"
+    Source="true"
+    Owner="oracle.fod.storefront.uiview.SubCategoryVO">
+    <DesignTime>
+      <Attr Name="_finderName" Value="SubCategory"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.fod.storefront.uiview.SubCategoryVO.CategoryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="ProductV"
+    Cardinality="-1"
+    Owner="oracle.fod.storefront.view.ProductVVO">
+    <DesignTime>
+      <Attr Name="_finderName" Value="ProductV"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.fod.storefront.view.ProductVVO.CategoryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.fod.storefront.StoreFrontModelBundle"/>
+  </ResourceBundle>
+</ViewLink>

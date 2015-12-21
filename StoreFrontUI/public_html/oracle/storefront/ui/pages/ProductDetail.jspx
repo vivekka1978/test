@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="ProductDetail.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:button text="Search" id="b1" action="search"/>
+                <af:button text="Shop" id="b2" action="shop"/>
+                <af:panelFormLayout id="pfl1">
+                    <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
+                                  required="#{bindings.ProductName.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.ProductName.hints.displayWidth}"
+                                  maximumLength="#{bindings.ProductName.hints.precision}"
+                                  shortDesc="#{bindings.ProductName.hints.tooltip}" id="it1">
+                        <f:validator binding="#{bindings.ProductName.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                                  required="#{bindings.Description.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.Description.hints.displayWidth}"
+                                  maximumLength="#{bindings.Description.hints.precision}"
+                                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2">
+                        <f:validator binding="#{bindings.Description.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.CategoryName.inputValue}"
+                                  label="#{bindings.CategoryName.hints.label}"
+                                  required="#{bindings.CategoryName.hints.mandatory}" readOnly="true"
+                                  columns="#{bindings.CategoryName.hints.displayWidth}"
+                                  maximumLength="#{bindings.CategoryName.hints.precision}"
+                                  shortDesc="#{bindings.CategoryName.hints.tooltip}" id="it3">
+                        <f:validator binding="#{bindings.CategoryName.validator}"/>
+                    </af:inputText>
+                </af:panelFormLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="CheckoutShippingPageDef"
+                Package="oracle.storefront.ui.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ShippingAddress" RangeSize="25" DataControl="FODCheckoutAMDataControl"
+              id="ShippingAddressIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="ShippingAddressIterator" id="Address1">
+      <AttrNames>
+        <Item Value="Address1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ShippingAddressIterator" id="Address2">
+      <AttrNames>
+        <Item Value="Address2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ShippingAddressIterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ShippingAddressIterator" id="StateProvince">
+      <AttrNames>
+        <Item Value="StateProvince"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ShippingAddressIterator" id="PostalCode">
+      <AttrNames>
+        <Item Value="PostalCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ShippingAddressIterator" id="CountryId">
+      <AttrNames>
+        <Item Value="CountryId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

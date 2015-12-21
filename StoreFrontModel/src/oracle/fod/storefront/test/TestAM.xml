@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<AppModule
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="TestAM"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge" >
+   <ViewUsage
+      Name="ShoppingCartItem1"
+      ViewObjectName="oracle.fod.storefront.uiview.ShoppingCartItemVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ShoppingCart1"
+      ViewObjectName="oracle.fod.storefront.uiview.ShoppingCartVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ShoppingCartItem2"
+      ViewObjectName="oracle.fod.storefront.uiview.ShoppingCartItemVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="LookupCodeV1"
+      ViewObjectName="oracle.fod.storefront.view.LookupCodeVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="CountryV1"
+      ViewObjectName="oracle.fod.storefront.view.CountryVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="CustomerV1"
+      ViewObjectName="oracle.fod.storefront.view.CustomerVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="PaymentOptionV1"
+      ViewObjectName="oracle.fod.storefront.view.PaymentOptionVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ProductV1"
+      ViewObjectName="oracle.fod.storefront.view.ProductVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="WarehouseV1"
+      ViewObjectName="oracle.fod.storefront.view.WarehouseVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="PaymentOptionV2"
+      ViewObjectName="oracle.fod.storefront.view.PaymentOptionVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="RootCategory1"
+      ViewObjectName="oracle.fod.storefront.uiview.RootCategoryVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="SubCategory1"
+      ViewObjectName="oracle.fod.storefront.uiview.SubCategoryVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="RootCategory2"
+      ViewObjectName="oracle.fod.storefront.uiview.RootCategoryVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="SubCategory2"
+      ViewObjectName="oracle.fod.storefront.uiview.SubCategoryVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="Supplier1"
+      ViewObjectName="oracle.fod.storefront.uiview.SupplierVO"/>
+   <ViewLinkUsage
+      Name="OrderItemsOrdersFkLink1"
+      ViewLinkObjectName="oracle.fod.storefront.link.OrderItemsOrdersFkLink"
+      SrcViewUsageName="oracle.fod.storefront.test.TestAM.ShoppingCart1"
+      DstViewUsageName="oracle.fod.storefront.test.TestAM.ShoppingCartItem2"
+      Reversed="false">
+   </ViewLinkUsage>
+   <ViewLinkUsage
+      Name="PaymentOptionsPersonsFkLink1"
+      ViewLinkObjectName="oracle.fod.storefront.link.PaymentOptionsPersonsFkLink"
+      SrcViewUsageName="oracle.fod.storefront.test.TestAM.CustomerV1"
+      DstViewUsageName="oracle.fod.storefront.test.TestAM.PaymentOptionV2"
+      Reversed="false">
+   </ViewLinkUsage>
+   <ViewLinkUsage
+      Name="RootCategoriesSubCategoriesLink"
+      ViewLinkObjectName="oracle.fod.storefront.link.RootCategoriesSubCategoriesLink"
+      SrcViewUsageName="oracle.fod.storefront.test.TestAM.RootCategory2"
+      DstViewUsageName="oracle.fod.storefront.test.TestAM.SubCategory2"
+      Reversed="false">
+   </ViewLinkUsage>
+</AppModule>

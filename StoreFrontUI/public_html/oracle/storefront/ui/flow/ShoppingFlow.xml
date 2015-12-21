@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="ShoppingFlow">
+    <?audit suppress oracle.adfdt.controller.adfc.source.audit.TaskFlowReturnActivitiesNotDefined?>
+    <default-activity>ProductCatalog</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="ProductCatalog">
+      <page>/oracle/storefront/ui/pages/ProductCatalog.jspx</page>
+    </view>
+    <view id="ProductSearch">
+      <page>/oracle/storefront/ui/pages/ProductSearch.jspx</page>
+    </view>
+    <view id="ProductDetail">
+      <page>/oracle/storefront/ui/pages/ProductDetail.jspx</page>
+    </view>
+    <task-flow-call id="CheckoutFlow">
+      <?audit suppress oracle.adfdt.controller.adfc.source.audit.TaskFlowCallPageTypesNotHomogeneous?>
+      <task-flow-reference>
+        <document>/oracle/storefront/ui/flow/CheckoutFlow.xml</document>
+        <id>CheckoutFlow</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="AddShoppingCart">
+      <task-flow-reference>
+        <document>/oracle/storefront/ui/flow/ShoppingCartFlow.xml</document>
+        <id>ShoppingCartFlow</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="DisplayShoppingCart">
+      <task-flow-reference>
+        <document>/oracle/storefront/ui/flow/ShoppingCartFlow.xml</document>
+        <id>ShoppingCartFlow</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__9">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>search</from-outcome>
+        <to-activity-id>ProductSearch</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>detail</from-outcome>
+        <to-activity-id>ProductDetail</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__12">
+        <from-outcome>shop</from-outcome>
+        <to-activity-id>ProductCatalog</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__13">
+        <from-outcome>checkout</from-outcome>
+        <to-activity-id>CheckoutFlow</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__1">
+        <from-outcome>add</from-outcome>
+        <to-activity-id>AddShoppingCart</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__2">
+        <from-outcome>cart</from-outcome>
+        <to-activity-id>DisplayShoppingCart</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

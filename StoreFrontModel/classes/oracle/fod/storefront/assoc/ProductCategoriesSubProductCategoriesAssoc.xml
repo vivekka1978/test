@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="ProductCategoriesSubProductCategoriesAssoc"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+   </DesignTime>
+   <AssociationEnd
+      Name="ParentCategoryIdProductCategory"
+      Cardinality="1"
+      Source="true"
+      Owner="oracle.fod.storefront.entity.ProductCategoryEO"
+      LockLevel="NONE" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.entity.ProductCategoryEO.CategoryId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_finderName" Value="ParentCategoryIdProductCategory" />
+         <Attr Name="_foreignKey" Value="oracle.fod.storefront.entity.ProductCategoryEO.ProductcategoryeoPrimaryKey" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="ProductCategory"
+      Cardinality="-1"
+      Owner="oracle.fod.storefront.entity.ProductCategoryEO" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.entity.ProductCategoryEO.ParentCategoryId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_finderName" Value="ProductCategory" />
+         <Attr Name="_foreignKey" Value="oracle.fod.storefront.entity.ProductCategoryEO.fk_ProductCategoryEO" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1">
+      <property
+         name="linkStyle">Polyline</property>
+   </OverallProperties>
+   <View
+      id="View2">
+      <property
+         name="activityId">BrowseSuppliers</property>
+      <property
+         name="page">/oracle/storefront/ui/pages/BrowseSuppliers.jspx</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>BrowseSuppliers&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">146.89648</property>
+      <property
+         name="x">190.0</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="taskFlowId">ManageSupplierFlow</property>
+      <property
+         name="activityId">ManageSupplierFlow</property>
+      <property
+         name="documentReference">/oracle/storefront/ui/flow/ManageSupplierFlow.xml</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ManageSupplierFlow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">147.44824</property>
+      <property
+         name="x">460.36426</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">update</property>
+      <property
+         name="sdm:polyPoints">R50,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="TaskFlowCall3"
+      to="View2">
+      <property
+         name="fromOutcome">done</property>
+      <property
+         name="sdm:polyPoints">L50,R50</property>
+   </ControlFlowCase>
+</SDM>

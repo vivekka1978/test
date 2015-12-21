@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="BrowseSuppliersPageDef"
+                Package="oracle.storefront.ui.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Supplier1" RangeSize="25" DataControl="FODSupplierAMDataControl" id="Supplier1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="Supplier1Iterator" id="Supplier1">
+      <nodeDefinition DefName="oracle.fod.storefront.uiview.SupplierVO" Name="Supplier10">
+        <AttrNames>
+          <Item Value="SupplierName"/>
+          <Item Value="SupplierId"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="SupplierStatus"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

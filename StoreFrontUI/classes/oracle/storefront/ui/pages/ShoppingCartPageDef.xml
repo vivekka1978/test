@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="ShoppingCartPageDef"
+                Package="oracle.storefront.ui.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ShoppingCartItem1" RangeSize="25" DataControl="FODShoppingCartAMDataControl"
+              id="ShoppingCartItem1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ShoppingCartItem1Iterator" id="ShoppingCartItem1">
+      <nodeDefinition DefName="oracle.fod.storefront.uiview.ShoppingCartItemVO" Name="ShoppingCartItem10">
+        <AttrNames>
+          <Item Value="ProductName"/>
+          <Item Value="Quantity"/>
+          <Item Value="ListPrice"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

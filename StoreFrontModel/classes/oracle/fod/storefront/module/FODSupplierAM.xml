@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FODSupplierAM"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="oracle.fod.storefront.module.FODSupplierAM_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="Supplier1"
+    ViewObjectName="oracle.fod.storefront.uiview.SupplierVO"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.fod.storefront.StoreFrontModelBundle"/>
+  </ResourceBundle>
+</AppModule>

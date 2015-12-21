@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProductVVO"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Variable
+    Name="SearchProductName"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
+  <SQLQuery><![CDATA[SELECT      
+    Products.DESCRIPTION,      
+    Products.ADDITIONAL_INFO,      
+    Products.COST_PRICE,      
+    Products.SUPPLIER_ID,      
+    Products.PRODUCT_NAME,      
+    Products.LIST_PRICE,      
+    Products.PRODUCT_ID,      
+    Products.CATEGORY_ID,      
+    Products.MIN_PRICE,      
+    Products.WARRANTY_PERIOD_MONTHS,      
+    Products.SHIPPING_CLASS_CODE,      
+    Products.EXTERNAL_URL,      
+    Products.ATTRIBUTE_CATEGORY,      
+    Products.ATTRIBUTE15,      
+    Products.ATTRIBUTE1,      
+    Products.ATTRIBUTE2,      
+    Products.ATTRIBUTE3,      
+    Products.ATTRIBUTE4,      
+    Products.ATTRIBUTE5,      
+    Products.ATTRIBUTE6,      
+    Products.ATTRIBUTE7,      
+    Products.ATTRIBUTE8,      
+    Products.ATTRIBUTE9,      
+    Products.ATTRIBUTE10,      
+    Products.ATTRIBUTE11,      
+    Products.ATTRIBUTE12,      
+    Products.ATTRIBUTE13,      
+    Products.ATTRIBUTE14, 
+    product_categories.category_name 
+FROM      
+    PRODUCTS Products 
+    ,product_categories  
+where products.category_id = product_categories.category_id]]></SQLQuery>
+  <ViewAttribute
+    Name="Description"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="4000"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DESCRIPTION"
+    Expression="DESCRIPTION"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="AdditionalInfo"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="4000"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ADDITIONAL_INFO"
+    Expression="ADDITIONAL_INFO"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CostPrice"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="8"
+    Scale="2"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="COST_PRICE"
+    Expression="COST_PRICE"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="SupplierId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="15"
+    Scale="0"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    AliasName="SUPPLIER_ID"
+    Expression="SUPPLIER_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ProductName"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="50"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PRODUCT_NAME"
+    Expression="PRODUCT_NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ListPrice"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="8"
+    Scale="2"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="LIST_PRICE"
+    Expression="LIST_PRICE"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ProductId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="15"
+    Scale="0"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    AliasName="PRODUCT_ID"
+    Expression="PRODUCT_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="CategoryId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="15"
+    Scale="0"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    AliasName="CATEGORY_ID"
+    Expression="CATEGORY_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="MinPrice"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="8"
+    Scale="2"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="MIN_PRICE"
+    Expression="MIN_PRICE"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="WarrantyPeriodMonths"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="2"
+    Scale="0"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    AliasName="WARRANTY_PERIOD_MONTHS"
+    Expression="WARRANTY_PERIOD_MONTHS"
+    SQLType="INTEGER"/>
+  <ViewAttribute
+    Name="ShippingClassCode"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="30"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="SHIPPING_CLASS_CODE"
+    Expression="SHIPPING_CLASS_CODE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ExternalUrl"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="200"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="EXTERNAL_URL"
+    Expression="EXTERNAL_URL"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="AttributeCategory"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="30"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE_CATEGORY"
+    Expression="ATTRIBUTE_CATEGORY"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute15"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE15"
+    Expression="ATTRIBUTE15"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute1"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE1"
+    Expression="ATTRIBUTE1"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute2"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE2"
+    Expression="ATTRIBUTE2"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute3"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE3"
+    Expression="ATTRIBUTE3"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute4"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE4"
+    Expression="ATTRIBUTE4"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute5"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE5"
+    Expression="ATTRIBUTE5"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute6"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE6"
+    Expression="ATTRIBUTE6"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute7"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE7"
+    Expression="ATTRIBUTE7"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute8"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE8"
+    Expression="ATTRIBUTE8"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute9"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE9"
+    Expression="ATTRIBUTE9"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute10"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE10"
+    Expression="ATTRIBUTE10"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute11"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE11"
+    Expression="ATTRIBUTE11"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute12"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE12"
+    Expression="ATTRIBUTE12"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute13"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE13"
+    Expression="ATTRIBUTE13"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Attribute14"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="150"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ATTRIBUTE14"
+    Expression="ATTRIBUTE14"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CategoryName"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="50"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="CATEGORY_NAME"
+    Expression="CATEGORY_NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="SearchByName"
+    ViewObjectName="oracle.fod.storefront.view.ProductVVO"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="ProductVVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="ProductName"
+        ViewAttribute="ProductName"
+        Operator="STARTSWITH"
+        Conjunction="AND"
+        Value=":SearchProductName"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Description"/>
+    <Item Value="AdditionalInfo"/>
+    <Item Value="CostPrice"/>
+    <Item Value="SupplierId"/>
+    <Item Value="ProductName"/>
+    <Item Value="ListPrice"/>
+    <Item Value="ProductId"/>
+    <Item Value="CategoryId"/>
+    <Item Value="MinPrice"/>
+    <Item Value="WarrantyPeriodMonths"/>
+    <Item Value="ShippingClassCode"/>
+    <Item Value="ExternalUrl"/>
+    <Item Value="AttributeCategory"/>
+    <Item Value="Attribute15"/>
+    <Item Value="Attribute1"/>
+    <Item Value="Attribute2"/>
+    <Item Value="Attribute3"/>
+    <Item Value="Attribute4"/>
+    <Item Value="Attribute5"/>
+    <Item Value="Attribute6"/>
+    <Item Value="Attribute7"/>
+    <Item Value="Attribute8"/>
+    <Item Value="Attribute9"/>
+    <Item Value="Attribute10"/>
+    <Item Value="Attribute11"/>
+    <Item Value="Attribute12"/>
+    <Item Value="Attribute13"/>
+    <Item Value="Attribute14"/>
+  </AttrArray>
+</ViewObject>

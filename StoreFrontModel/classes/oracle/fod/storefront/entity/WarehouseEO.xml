@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="WarehouseEO"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge"
+   DBObjectType="table"
+   DBObjectName="WAREHOUSES"
+   AliasName="WarehouseEO"
+   BindingStyle="OracleName" >
+   <Attribute
+      Name="WarehouseId"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="WAREHOUSE_ID"
+      SQLType="NUMERIC"
+      Type="java.lang.Long"
+      ColumnType="NUMBER"
+      TableName="WAREHOUSES"
+      PrimaryKey="true" >
+   </Attribute>
+   <Attribute
+      Name="AddressId"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="ADDRESS_ID"
+      SQLType="NUMERIC"
+      Type="java.lang.Long"
+      ColumnType="NUMBER"
+      TableName="WAREHOUSES" >
+   </Attribute>
+   <Attribute
+      Name="WarehouseName"
+      IsNotNull="true"
+      Precision="35"
+      ColumnName="WAREHOUSE_NAME"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="WAREHOUSES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="35" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      Precision="60"
+      ColumnName="CREATED_BY"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="WAREHOUSES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      IsNotNull="true"
+      ColumnName="CREATION_DATE"
+      SQLType="DATE"
+      Type="java.sql.Timestamp"
+      ColumnType="DATE"
+      TableName="WAREHOUSES" >
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      Precision="60"
+      ColumnName="LAST_UPDATED_BY"
+      SQLType="VARCHAR"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      TableName="WAREHOUSES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="60" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      ColumnName="LAST_UPDATE_DATE"
+      SQLType="DATE"
+      Type="java.sql.Timestamp"
+      ColumnType="DATE"
+      TableName="WAREHOUSES" >
+   </Attribute>
+   <Attribute
+      Name="ObjectVersionId"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="OBJECT_VERSION_ID"
+      SQLType="NUMERIC"
+      Type="java.lang.Long"
+      ColumnType="NUMBER"
+      TableName="WAREHOUSES" >
+   </Attribute>
+   <AccessorAttribute
+      Name="Address"
+      Association="oracle.fod.storefront.assoc.WarehousesAddressesFkAssoc"
+      AssociationEnd="oracle.fod.storefront.assoc.WarehousesAddressesFkAssoc.Address"
+      AssociationOtherEnd="oracle.fod.storefront.assoc.WarehousesAddressesFkAssoc.Warehouse"
+      Type="oracle.jbo.server.EntityImpl" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="WarehouseStockLevel"
+      Association="oracle.fod.storefront.assoc.WarehouseStockLevelsFkAssoc"
+      AssociationEnd="oracle.fod.storefront.assoc.WarehouseStockLevelsFkAssoc.WarehouseStockLevel"
+      AssociationOtherEnd="oracle.fod.storefront.assoc.WarehouseStockLevelsFkAssoc.Warehouse"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="WarehousesPk"
+      PrimaryKey="true" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.entity.WarehouseEO.WarehouseId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_DBObjectName" Value="WAREHOUSES_PK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="WarehousesAddressesFk" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.fod.storefront.entity.WarehouseEO.AddressId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_referencedKey" Value="ADDRESSES_PK" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_DBObjectName" Value="WAREHOUSES_ADDRESSES_FK" />
+      </DesignTime>
+   </Key>
+</Entity>

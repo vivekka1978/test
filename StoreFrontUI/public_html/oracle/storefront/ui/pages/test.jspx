@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="test.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelGroupLayout layout="vertical" id="pgl1">
+                    <af:panelHeader text="BrowseProducts" id="ph1">
+                        <af:query id="qryId1" headerText="Search" disclosed="true"
+                                  value="#{bindings.SearchByNameQuery.queryDescriptor}"
+                                  model="#{bindings.SearchByNameQuery.queryModel}"
+                                  queryListener="#{bindings.SearchByNameQuery.processQuery}"
+                                  queryOperationListener="#{bindings.SearchByNameQuery.processQueryOperation}"
+                                  resultComponentId="::resId1"/>
+                    </af:panelHeader>
+                    <af:table value="#{bindings.BrowseProducts.collectionModel}" var="row"
+                              rows="#{bindings.BrowseProducts.rangeSize}"
+                              emptyText="#{bindings.BrowseProducts.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.BrowseProducts.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.BrowseProducts.collectionModel.makeCurrent}"
+                              rowSelection="single" fetchSize="#{bindings.BrowseProducts.rangeSize}" id="resId1">
+                        <af:column headerText="#{bindings.BrowseProducts.hints.ProductName.label}" id="resId1c1">
+                            <af:outputText value="#{row.ProductName}"
+                                           shortDesc="#{bindings.BrowseProducts.hints.ProductName.tooltip}" id="ot1"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.BrowseProducts.hints.Description.label}" id="resId1c2">
+                            <af:outputText value="#{row.Description}"
+                                           shortDesc="#{bindings.BrowseProducts.hints.Description.tooltip}" id="ot2"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.BrowseProducts.hints.ListPrice.label}" id="resId1c3">
+                            <af:outputText value="#{row.ListPrice}"
+                                           shortDesc="#{bindings.BrowseProducts.hints.ListPrice.tooltip}" id="ot3">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.BrowseProducts.hints.ListPrice.format}"/>
+                            </af:outputText>
+                        </af:column>
+                    </af:table>
+                </af:panelGroupLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

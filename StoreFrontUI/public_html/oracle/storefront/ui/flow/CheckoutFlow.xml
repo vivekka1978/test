@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="CheckoutFlow">
+    <default-activity>init</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="CheckoutShipping">
+      <page>/oracle/storefront/ui/pages/CheckoutShipping.jsf</page>
+      <train-stop>
+        <display-name>Shipping</display-name>
+      </train-stop>
+    </view>
+    <view id="CheckoutPayment">
+      <train-stop>
+        <display-name>Billing</display-name>
+      </train-stop>
+    </view>
+    <view id="CheckoutConfirm">
+      <train-stop>
+        <display-name>Confirm</display-name>
+      </train-stop>
+    </view>
+    <task-flow-return id="SubmitOrder">
+      <outcome>
+        <name>SubmitOrder</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="CancelOrder">
+      <outcome>
+        <name>CancelOrder</name>
+      </outcome>
+    </task-flow-return>
+    <method-call id="init">
+      <method>#{bindings.init.execute}</method>
+      <outcome>
+        <fixed-outcome>init</fixed-outcome>
+      </outcome>
+    </method-call>
+    <train/>
+    <control-flow-rule id="__1">
+      <from-activity-id>CheckoutConfirm</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>submit</from-outcome>
+        <to-activity-id>SubmitOrder</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>cancel</from-outcome>
+        <to-activity-id>CancelOrder</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>init</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>init</from-outcome>
+        <to-activity-id>CheckoutShipping</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

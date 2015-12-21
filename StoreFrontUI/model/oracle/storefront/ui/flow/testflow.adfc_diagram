@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <MethodCall
+      id="MethodCall2">
+      <property
+         name="activityId">init</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>init&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">251.14941</property>
+      <property
+         name="x">195.5</property>
+   </MethodCall>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="taskFlowId">CheckoutFlow</property>
+      <property
+         name="activityId">CheckoutFlow</property>
+      <property
+         name="documentReference">/oracle/storefront/ui/flow/CheckoutFlow.xml</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CheckoutFlow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">246.44824</property>
+      <property
+         name="x">492.01562</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="MethodCall2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">init</property>
+      <property
+         name="sdm:polyPoints">R50,236.5,251.14941,451.01562,246.09766,L50</property>
+   </ControlFlowCase>
+</SDM>

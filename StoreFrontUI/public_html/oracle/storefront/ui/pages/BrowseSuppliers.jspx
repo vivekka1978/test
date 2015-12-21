@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="BrowseSuppliers.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:table value="#{bindings.Supplier1.collectionModel}" var="row" rows="#{bindings.Supplier1.rangeSize}"
+                          emptyText="#{bindings.Supplier1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.Supplier1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.Supplier1.collectionModel.makeCurrent}" rowSelection="single"
+                          fetchSize="#{bindings.Supplier1.rangeSize}" id="t1">
+                    <af:column sortProperty="#{bindings.Supplier1.hints.SupplierName.name}" sortable="true"
+                               headerText="#{bindings.Supplier1.hints.SupplierName.label}" id="c1">
+                        <af:outputText value="#{row.SupplierName}"
+                                       shortDesc="#{bindings.Supplier1.hints.SupplierName.tooltip}" id="ot1"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Supplier1.hints.SupplierId.name}" sortable="true"
+                               headerText="#{bindings.Supplier1.hints.SupplierId.label}" id="c2">
+                        <af:link id="l1" action="update">
+                            <af:outputText value="#{row.SupplierId}"
+                                           shortDesc="#{bindings.Supplier1.hints.SupplierId.tooltip}" id="ot2">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.Supplier1.hints.SupplierId.format}"/>
+                            </af:outputText>
+                        </af:link>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Supplier1.hints.Email.name}" sortable="true"
+                               headerText="#{bindings.Supplier1.hints.Email.label}" id="c3">
+                        <af:outputText value="#{row.Email}" shortDesc="#{bindings.Supplier1.hints.Email.tooltip}"
+                                       id="ot3"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Supplier1.hints.PhoneNumber.name}" sortable="true"
+                               headerText="#{bindings.Supplier1.hints.PhoneNumber.label}" id="c4">
+                        <af:outputText value="#{row.PhoneNumber}"
+                                       shortDesc="#{bindings.Supplier1.hints.PhoneNumber.tooltip}" id="ot4"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Supplier1.hints.SupplierStatus.name}" sortable="true"
+                               headerText="#{bindings.Supplier1.hints.SupplierStatus.label}" id="c5">
+                        <af:outputText value="#{row.SupplierStatus}"
+                                       shortDesc="#{bindings.Supplier1.hints.SupplierStatus.tooltip}" id="ot5"/>
+                    </af:column>
+                </af:table>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

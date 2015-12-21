@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="ShowSuppliersFlow">
+    <default-activity>BrowseSuppliers</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="BrowseSuppliers">
+      <page>/oracle/storefront/ui/pages/BrowseSuppliers.jspx</page>
+    </view>
+    <task-flow-call id="ManageSupplierFlow">
+      <task-flow-reference>
+        <document>/oracle/storefront/ui/flow/ManageSupplierFlow.xml</document>
+        <id>ManageSupplierFlow</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>BrowseSuppliers</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>update</from-outcome>
+        <to-activity-id>ManageSupplierFlow</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>ManageSupplierFlow</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>done</from-outcome>
+        <to-activity-id>BrowseSuppliers</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

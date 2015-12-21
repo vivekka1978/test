@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="ProductCategory.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:tree value="#{bindings.RootCategory1.treeModel}" var="node"
+                         selectionListener="#{bindings.RootCategory1.treeModel.makeCurrent}" rowSelection="single"
+                         id="t1">
+                    <f:facet name="nodeStamp">
+                        <af:link id="ot1" text="#{node}"/>
+                    </f:facet>
+                </af:tree>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
