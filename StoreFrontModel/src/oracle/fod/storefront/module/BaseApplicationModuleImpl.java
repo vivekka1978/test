@@ -17,5 +17,6 @@ public class BaseApplicationModuleImpl extends ApplicationModuleImpl {
 
     public BaseApplicationModuleImpl() {
         super();
+        //test comment
     }
 }
