@@ -12,11 +12,13 @@
       </train-stop>
     </view>
     <view id="CheckoutPayment">
+      <page>/oracle/storefront/ui/pages/CheckoutPayment.jspx</page>
       <train-stop>
         <display-name>Billing</display-name>
       </train-stop>
     </view>
     <view id="CheckoutConfirm">
+      <page>/oracle/storefront/ui/pages/CheckoutConfirm.jspx</page>
       <train-stop>
         <display-name>Confirm</display-name>
       </train-stop>

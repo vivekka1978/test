@@ -26,6 +26,8 @@
       <property
          name="activityId">CheckoutPayment</property>
       <property
+         name="page">/oracle/storefront/ui/pages/CheckoutPayment.jspx</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>CheckoutPayment&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="trainStop">true</property>
@@ -48,6 +50,8 @@
       id="View5">
       <property
          name="activityId">CheckoutConfirm</property>
+      <property
+         name="page">/oracle/storefront/ui/pages/CheckoutConfirm.jspx</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>CheckoutConfirm&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -105,7 +109,7 @@
       <property
          name="fromOutcome">submit</property>
       <property
-         name="sdm:polyPoints">R50,502.5,323.7412,650.5,323.84473,L50</property>
+         name="sdm:polyPoints">R50,502.0,323.7412,651.0,323.84473,L50</property>
    </ControlFlowCase>
    <WildcardControlFlowRule
       id="WildcardControlFlowRule10">
@@ -124,7 +128,7 @@
       <property
          name="fromOutcome">cancel</property>
       <property
-         name="sdm:polyPoints">L50,490.5,502.74707,403.5,502.89648,R50</property>
+         name="sdm:polyPoints">L50,491.0,502.74707,403.0,502.89648,R50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall12">
@@ -149,6 +153,6 @@
       <property
          name="fromOutcome">init</property>
       <property
-         name="sdm:polyPoints">R50,-24.0,327.09766,76.5,324.14355,L50</property>
+         name="sdm:polyPoints">R50,-24.5,327.09766,77.0,324.14355,L50</property>
    </ControlFlowCase>
 </SDM>

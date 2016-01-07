@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="CheckoutConfirm.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+            <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+            <af:trainButtonBar value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="tbb1"/>
+                <af:panelGroupLayout id="pgl1" layout="scroll">
+                    <af:panelHeader text="Payment Options" id="ph1">
+                        <f:facet name="context"/>
+                        <f:facet name="menuBar"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="legend"/>
+                        <f:facet name="info"/>
+                        <af:panelFormLayout id="pfl1">
+                            <af:inputText value="#{bindings.PaymentTypeCode.inputValue}"
+                                          label="#{bindings.PaymentTypeCode.hints.label}"
+                                          required="#{bindings.PaymentTypeCode.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.PaymentTypeCode.hints.displayWidth}"
+                                          maximumLength="#{bindings.PaymentTypeCode.hints.precision}"
+                                          shortDesc="#{bindings.PaymentTypeCode.hints.tooltip}" id="it1">
+                                <f:validator binding="#{bindings.PaymentTypeCode.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.AccountNumber.inputValue}"
+                                          label="#{bindings.AccountNumber.hints.label}"
+                                          required="#{bindings.AccountNumber.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.AccountNumber.hints.displayWidth}"
+                                          maximumLength="#{bindings.AccountNumber.hints.precision}"
+                                          shortDesc="#{bindings.AccountNumber.hints.tooltip}" id="it2">
+                                <f:validator binding="#{bindings.AccountNumber.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.AccountNumber.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.CardTypeCode.inputValue}"
+                                          label="#{bindings.CardTypeCode.hints.label}"
+                                          required="#{bindings.CardTypeCode.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.CardTypeCode.hints.displayWidth}"
+                                          maximumLength="#{bindings.CardTypeCode.hints.precision}"
+                                          shortDesc="#{bindings.CardTypeCode.hints.tooltip}" id="it3">
+                                <f:validator binding="#{bindings.CardTypeCode.validator}"/>
+                            </af:inputText>
+                            <af:inputDate value="#{bindings.ExpireDate.inputValue}" readOnly="true"
+                                          label="#{bindings.ExpireDate.hints.label}"
+                                          required="#{bindings.ExpireDate.hints.mandatory}"
+                                          columns="#{bindings.ExpireDate.hints.displayWidth}"
+                                          shortDesc="#{bindings.ExpireDate.hints.tooltip}" id="id1">
+                                <f:validator binding="#{bindings.ExpireDate.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.ExpireDate.format}"/>
+                            </af:inputDate>
+                            <af:inputText value="#{bindings.CheckDigits.inputValue}"
+                                          label="#{bindings.CheckDigits.hints.label}"
+                                          required="#{bindings.CheckDigits.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.CheckDigits.hints.displayWidth}"
+                                          maximumLength="#{bindings.CheckDigits.hints.precision}"
+                                          shortDesc="#{bindings.CheckDigits.hints.tooltip}" id="it4">
+                                <f:validator binding="#{bindings.CheckDigits.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.CheckDigits.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.RoutingIdentifier.inputValue}"
+                                          label="#{bindings.RoutingIdentifier.hints.label}"
+                                          required="#{bindings.RoutingIdentifier.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.RoutingIdentifier.hints.displayWidth}"
+                                          maximumLength="#{bindings.RoutingIdentifier.hints.precision}"
+                                          shortDesc="#{bindings.RoutingIdentifier.hints.tooltip}" id="it5">
+                                <f:validator binding="#{bindings.RoutingIdentifier.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.InstitutionName.inputValue}"
+                                          label="#{bindings.InstitutionName.hints.label}"
+                                          required="#{bindings.InstitutionName.hints.mandatory}" readOnly="true"
+                                          columns="#{bindings.InstitutionName.hints.displayWidth}"
+                                          maximumLength="#{bindings.InstitutionName.hints.precision}"
+                                          shortDesc="#{bindings.InstitutionName.hints.tooltip}" id="it6">
+                                <f:validator binding="#{bindings.InstitutionName.validator}"/>
+                            </af:inputText>
+                        </af:panelFormLayout>
+                    </af:panelHeader>
+                    <af:panelGroupLayout id="pgl2" layout="horizontal" styleClass="AFStretchWidth">
+                        <af:panelHeader text="Shipping Address" id="ph2">
+                            <f:facet name="context"/>
+                            <f:facet name="menuBar"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="legend"/>
+                            <f:facet name="info"/>
+                            <af:panelFormLayout id="pfl2">
+                                <af:inputText value="#{bindings.Address1.inputValue}"
+                                              label="#{bindings.Address1.hints.label}"
+                                              required="#{bindings.Address1.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.Address1.hints.displayWidth}"
+                                              maximumLength="#{bindings.Address1.hints.precision}"
+                                              shortDesc="#{bindings.Address1.hints.tooltip}" id="it7">
+                                    <f:validator binding="#{bindings.Address1.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.Address2.inputValue}"
+                                              label="#{bindings.Address2.hints.label}"
+                                              required="#{bindings.Address2.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.Address2.hints.displayWidth}"
+                                              maximumLength="#{bindings.Address2.hints.precision}"
+                                              shortDesc="#{bindings.Address2.hints.tooltip}" id="it8">
+                                    <f:validator binding="#{bindings.Address2.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
+                                              required="#{bindings.City.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.City.hints.displayWidth}"
+                                              maximumLength="#{bindings.City.hints.precision}"
+                                              shortDesc="#{bindings.City.hints.tooltip}" id="it9">
+                                    <f:validator binding="#{bindings.City.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.PostalCode.inputValue}"
+                                              label="#{bindings.PostalCode.hints.label}"
+                                              required="#{bindings.PostalCode.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.PostalCode.hints.displayWidth}"
+                                              maximumLength="#{bindings.PostalCode.hints.precision}"
+                                              shortDesc="#{bindings.PostalCode.hints.tooltip}" id="it10">
+                                    <f:validator binding="#{bindings.PostalCode.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.StateProvince.inputValue}"
+                                              label="#{bindings.StateProvince.hints.label}"
+                                              required="#{bindings.StateProvince.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.StateProvince.hints.displayWidth}"
+                                              maximumLength="#{bindings.StateProvince.hints.precision}"
+                                              shortDesc="#{bindings.StateProvince.hints.tooltip}" id="it11">
+                                    <f:validator binding="#{bindings.StateProvince.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.CountryId.inputValue}"
+                                              label="#{bindings.CountryId.hints.label}"
+                                              required="#{bindings.CountryId.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.CountryId.hints.displayWidth}"
+                                              maximumLength="#{bindings.CountryId.hints.precision}"
+                                              shortDesc="#{bindings.CountryId.hints.tooltip}" id="it12">
+                                    <f:validator binding="#{bindings.CountryId.validator}"/>
+                                </af:inputText>
+                            </af:panelFormLayout>
+                        </af:panelHeader>
+                        <af:panelHeader text="Billing Address" id="ph3">
+                            <f:facet name="context"/>
+                            <f:facet name="menuBar"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="legend"/>
+                            <f:facet name="info"/>
+                            <af:panelFormLayout id="pfl3">
+                                <af:inputText value="#{bindings.Address11.inputValue}"
+                                              label="#{bindings.Address11.hints.label}"
+                                              required="#{bindings.Address11.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.Address11.hints.displayWidth}"
+                                              maximumLength="#{bindings.Address11.hints.precision}"
+                                              shortDesc="#{bindings.Address11.hints.tooltip}" id="it13">
+                                    <f:validator binding="#{bindings.Address11.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.AddressId.inputValue}"
+                                              label="#{bindings.AddressId.hints.label}"
+                                              required="#{bindings.AddressId.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.AddressId.hints.displayWidth}"
+                                              maximumLength="#{bindings.AddressId.hints.precision}"
+                                              shortDesc="#{bindings.AddressId.hints.tooltip}" id="it15">
+                                    <f:validator binding="#{bindings.AddressId.validator}"/>
+                                    <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressId.format}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.City1.inputValue}" label="#{bindings.City1.hints.label}"
+                                              required="#{bindings.City1.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.City1.hints.displayWidth}"
+                                              maximumLength="#{bindings.City1.hints.precision}"
+                                              shortDesc="#{bindings.City1.hints.tooltip}" id="it16">
+                                    <f:validator binding="#{bindings.City1.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.CountryId1.inputValue}"
+                                              label="#{bindings.CountryId1.hints.label}"
+                                              required="#{bindings.CountryId1.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.CountryId1.hints.displayWidth}"
+                                              maximumLength="#{bindings.CountryId1.hints.precision}"
+                                              shortDesc="#{bindings.CountryId1.hints.tooltip}" id="it17">
+                                    <f:validator binding="#{bindings.CountryId1.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.PostalCode1.inputValue}"
+                                              label="#{bindings.PostalCode1.hints.label}"
+                                              required="#{bindings.PostalCode1.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.PostalCode1.hints.displayWidth}"
+                                              maximumLength="#{bindings.PostalCode1.hints.precision}"
+                                              shortDesc="#{bindings.PostalCode1.hints.tooltip}" id="it18">
+                                    <f:validator binding="#{bindings.PostalCode1.validator}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.StateProvince1.inputValue}"
+                                              label="#{bindings.StateProvince1.hints.label}"
+                                              required="#{bindings.StateProvince1.hints.mandatory}" readOnly="true"
+                                              columns="#{bindings.StateProvince1.hints.displayWidth}"
+                                              maximumLength="#{bindings.StateProvince1.hints.precision}"
+                                              shortDesc="#{bindings.StateProvince1.hints.tooltip}" id="it19">
+                                    <f:validator binding="#{bindings.StateProvince1.validator}"/>
+                                </af:inputText>
+                            </af:panelFormLayout>
+                        </af:panelHeader>
+                        <f:facet name="separator">
+                            <af:spacer width="10" height="10" id="s1"/>
+                        </f:facet>
+                    </af:panelGroupLayout>
+                    <af:panelHeader text="Order Items" id="ph4">
+                        <f:facet name="context"/>
+                        <f:facet name="menuBar"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="legend"/>
+                        <f:facet name="info"/>
+                        <af:table value="#{bindings.ShoppingCartItem1.collectionModel}" var="row"
+                                  rows="#{bindings.ShoppingCartItem1.rangeSize}"
+                                  emptyText="#{bindings.ShoppingCartItem1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0" fetchSize="#{bindings.ShoppingCartItem1.rangeSize}" id="t1"
+                                  width="100%" columnStretching="last">
+                            <af:column headerText="#{bindings.ShoppingCartItem1.hints.Quantity.label}" id="c1">
+                                <af:outputText value="#{row.Quantity}"
+                                               shortDesc="#{bindings.ShoppingCartItem1.hints.Quantity.tooltip}"
+                                               id="ot1">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.ShoppingCartItem1.hints.Quantity.format}"/>
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.ShoppingCartItem1.hints.UnitPrice.label}" id="c2">
+                                <af:outputText value="#{row.UnitPrice}"
+                                               shortDesc="#{bindings.ShoppingCartItem1.hints.UnitPrice.tooltip}"
+                                               id="ot2">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.ShoppingCartItem1.hints.UnitPrice.format}"/>
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.ShoppingCartItem1.hints.ProductName.label}" id="c3">
+                                <af:outputText value="#{row.ProductName}"
+                                               shortDesc="#{bindings.ShoppingCartItem1.hints.ProductName.tooltip}"
+                                               id="ot3"/>
+                            </af:column>
+                            <af:column headerText="#{bindings.ShoppingCartItem1.hints.Description.label}" id="c4">
+                                <af:outputText value="#{row.Description}"
+                                               shortDesc="#{bindings.ShoppingCartItem1.hints.Description.tooltip}"
+                                               id="ot4"/>
+                            </af:column>
+                        </af:table>
+                    </af:panelHeader>
+                </af:panelGroupLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

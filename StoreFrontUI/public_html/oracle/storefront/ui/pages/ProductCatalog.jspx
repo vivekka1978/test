@@ -6,22 +6,22 @@
         <af:document title="Products" id="d1">
             <af:messages id="m1"/>
             <af:form id="f1">
-                <af:panelGroupLayout id="pgl1">
+                <af:panelGroupLayout id="pgl1" layout="scroll">
                     <af:breadCrumbs id="bc1">
                         <af:commandNavigationItem text="Store" id="cni1"/>
                         <af:commandNavigationItem text="commandNavigationItem 1" id="cni2"/>
                         <af:commandNavigationItem text="commandNavigationItem 1" id="cni3"/>
                     </af:breadCrumbs>
-                    <af:button text="Search" id="b1" action="search"/>
+                   <af:button text="Search" id="b1" action="search"/>
                     <af:button text="Show Cart" id="b2" action="cart"/>
-                    <af:panelHeader text="BrowseCategory1" id="ph1">
+                    <af:panelHeader text="Categories" id="ph1">
                         <af:table id="md1" rows="#{bindings.BrowseCategory1.rangeSize}"
                                   fetchSize="#{bindings.BrowseCategory1.rangeSize}"
                                   emptyText="#{bindings.BrowseCategory1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                   var="row" value="#{bindings.BrowseCategory1.collectionModel}" rowBandingInterval="0"
                                   selectedRowKeys="#{bindings.BrowseCategory1.collectionModel.selectedRow}"
                                   selectionListener="#{bindings.BrowseCategory1.collectionModel.makeCurrent}"
-                               >
+                               width="100%" columnStretching="last">
                             <af:column headerText="#{bindings.BrowseCategory1.hints.CategoryName.label}"
                                        sortable="false" id="c4">
                                 <af:outputText value="#{row.CategoryName}"
@@ -36,12 +36,12 @@
                             </af:column>
                         </af:table>
                     </af:panelHeader>
-                    <af:panelHeader text="BrowseSubCategory1" id="ph2">
+                    <af:panelHeader text="Sub Categories" id="ph2">
                         <af:table rows="#{bindings.BrowseSubCategory1.rangeSize}"
                                   fetchSize="#{bindings.BrowseSubCategory1.rangeSize}"
                                   emptyText="#{bindings.BrowseSubCategory1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                   var="row" value="#{bindings.BrowseSubCategory1.collectionModel}"
-                                  rowBandingInterval="0" id="t1">
+                                  rowBandingInterval="0" id="t1" width="100%" columnStretching="last">
                             <af:column headerText="#{bindings.BrowseSubCategory1.hints.CategoryName.label}"
                                        sortable="false" id="c9">
                                 <af:outputText value="#{row.CategoryName}"
@@ -56,27 +56,20 @@
                             </af:column>
                         </af:table>
                     </af:panelHeader>
-                    <af:panelHeader text="Browse Products1" id="ph3">
+                    <af:panelHeader text="Products" id="ph3">
                         <af:table value="#{bindings.BrowseProduct1.collectionModel}" var="row"
                                   rows="#{bindings.BrowseProduct1.rangeSize}"
                                   emptyText="#{bindings.BrowseProduct1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                  rowBandingInterval="0" fetchSize="#{bindings.BrowseProduct1.rangeSize}" id="t2">
+                                  rowBandingInterval="0" fetchSize="#{bindings.BrowseProduct1.rangeSize}" id="t2"
+                                  width="100%" columnStretching="column:description">
                             <af:column headerText="#{bindings.BrowseProduct1.hints.ProductName.label}" id="c2">
                                 <af:link id="l1" actionListener="#{bindings.setCurrentRowWithKeyValue.execute}"
                                          disabled="#{!bindings.setCurrentRowWithKeyValue.enabled}" action="detail">
                                     <af:outputText shortDesc="#{bindings.BrowseProduct1.hints.ProductName.tooltip}"
-                                                   id="ot8" value="#{row.ProductName}"/>
+                                                   id="ot8" value="#{row.ProductName}-#{row.ProductId}"/>
                                 </af:link>
-                                <af:inputText value="#{row.bindings.ProductName.inputValue}"
-                                              label="#{bindings.BrowseProduct1.hints.ProductName.label}"
-                                              required="#{bindings.BrowseProduct1.hints.ProductName.mandatory}"
-                                              columns="#{bindings.BrowseProduct1.hints.ProductName.displayWidth}"
-                                              maximumLength="#{bindings.BrowseProduct1.hints.ProductName.precision}"
-                                              shortDesc="#{bindings.BrowseProduct1.hints.ProductName.tooltip}" id="it1">
-                                    <f:validator binding="#{row.bindings.ProductName.validator}"/>
-                                </af:inputText>
                             </af:column>
-                            <af:column headerText="#{bindings.BrowseProduct1.hints.Description.label}" id="c3">
+                            <af:column headerText="#{bindings.BrowseProduct1.hints.Description.label}" id="description">
                                 <af:outputText value="#{row.Description}"
                                                shortDesc="#{bindings.BrowseProduct1.hints.Description.tooltip}"
                                                id="ot7"/>

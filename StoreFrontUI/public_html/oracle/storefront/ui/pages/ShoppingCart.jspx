@@ -6,31 +6,41 @@
     <af:document title="ShoppingCart.jspx" id="d1">
       <af:messages id="m1"/>
       <af:form id="f1">
-        <af:button text="Shop" id="b1" action="shop"/>
-        <af:button text="Checkout" id="b2" action="checkout"/>
-        <af:table value="#{bindings.ShoppingCartItem1.collectionModel}" var="row"
-                  rows="#{bindings.ShoppingCartItem1.rangeSize}"
-                  emptyText="#{bindings.ShoppingCartItem1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                  rowBandingInterval="0" selectedRowKeys="#{bindings.ShoppingCartItem1.collectionModel.selectedRow}"
-                  selectionListener="#{bindings.ShoppingCartItem1.collectionModel.makeCurrent}" rowSelection="single"
-                  fetchSize="#{bindings.ShoppingCartItem1.rangeSize}" id="t1">
-          <af:column headerText="#{bindings.ShoppingCartItem1.hints.ProductName.label}" id="c1">
-            <af:outputText value="#{row.ProductName}"
-                           shortDesc="#{bindings.ShoppingCartItem1.hints.ProductName.tooltip}" id="ot1"/>
-          </af:column>
-          <af:column headerText="#{bindings.ShoppingCartItem1.hints.Quantity.label}" id="c2">
-            <af:outputText value="#{row.Quantity}" shortDesc="#{bindings.ShoppingCartItem1.hints.Quantity.tooltip}"
-                           id="ot2">
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.ShoppingCartItem1.hints.Quantity.format}"/>
-            </af:outputText>
-          </af:column>
-          <af:column headerText="#{bindings.ShoppingCartItem1.hints.ListPrice.label}" id="c3">
-            <af:outputText value="#{row.ListPrice}" shortDesc="#{bindings.ShoppingCartItem1.hints.ListPrice.tooltip}"
-                           id="ot3">
-              <af:convertNumber groupingUsed="false" pattern="#{bindings.ShoppingCartItem1.hints.ListPrice.format}"/>
-            </af:outputText>
-          </af:column>
-        </af:table>
+        <af:panelHeader text="Shopping Cart" id="ph1">
+          <f:facet name="context"/>
+          <f:facet name="menuBar"/>
+          <f:facet name="toolbar">
+            <af:toolbar id="t2">
+              <af:button text="Shop" id="b1" action="shop"/>
+              <af:button text="Checkout" id="b2" action="checkout"/>
+            </af:toolbar>
+          </f:facet>
+          <f:facet name="legend"/>
+          <f:facet name="info"/>
+          <af:table value="#{bindings.ShoppingCartItem1.collectionModel}" var="row"
+                    rows="#{bindings.ShoppingCartItem1.rangeSize}"
+                    emptyText="#{bindings.ShoppingCartItem1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    rowBandingInterval="0" selectedRowKeys="#{bindings.ShoppingCartItem1.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.ShoppingCartItem1.collectionModel.makeCurrent}" rowSelection="single"
+                    fetchSize="#{bindings.ShoppingCartItem1.rangeSize}" id="t1" width="100%" columnStretching="last">
+            <af:column headerText="#{bindings.ShoppingCartItem1.hints.ProductName.label}" id="c1">
+              <af:outputText value="#{row.ProductName}"
+                             shortDesc="#{bindings.ShoppingCartItem1.hints.ProductName.tooltip}" id="ot1"/>
+            </af:column>
+            <af:column headerText="#{bindings.ShoppingCartItem1.hints.Quantity.label}" id="c2">
+              <af:outputText value="#{row.Quantity}" shortDesc="#{bindings.ShoppingCartItem1.hints.Quantity.tooltip}"
+                             id="ot2">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.ShoppingCartItem1.hints.Quantity.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column headerText="#{bindings.ShoppingCartItem1.hints.ListPrice.label}" id="c3">
+              <af:outputText value="#{row.ListPrice}" shortDesc="#{bindings.ShoppingCartItem1.hints.ListPrice.tooltip}"
+                             id="ot3">
+                <af:convertNumber groupingUsed="false" pattern="#{bindings.ShoppingCartItem1.hints.ListPrice.format}"/>
+              </af:outputText>
+            </af:column>
+          </af:table>
+        </af:panelHeader>
       </af:form>
     </af:document>
   </f:view>

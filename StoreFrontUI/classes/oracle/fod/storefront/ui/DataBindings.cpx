@@ -23,6 +23,10 @@
           usageId="oracle_fod_storefront_ui_testflow_testflow_initPageDef"/>
     <page path="/oracle/storefront/ui/flow/CheckoutFlow.xml#CheckoutFlow@init"
           usageId="oracle_fod_storefront_ui_CheckoutFlow_CheckoutFlow_initPageDef"/>
+    <page path="/oracle/storefront/ui/pages/CheckoutPayment.jspx"
+          usageId="oracle_fod_storefront_ui_CheckoutPaymentPageDef"/>
+    <page path="/oracle/storefront/ui/pages/CheckoutConfirm.jspx"
+          usageId="oracle_fod_storefront_ui_CheckoutConfirmPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="oracle_fod_storefront_ui_ProductsPageDef" path="oracle.storefront.ui.pages.ProductCatalogPageDef"/>
@@ -44,6 +48,10 @@
           path="oracle.storefront.ui.flow.testflow_testflow_initPageDef"/>
     <page id="oracle_fod_storefront_ui_CheckoutFlow_CheckoutFlow_initPageDef"
           path="oracle.storefront.ui.flow.CheckoutFlow_CheckoutFlow_initPageDef"/>
+    <page id="oracle_fod_storefront_ui_CheckoutPaymentPageDef"
+          path="oracle.storefront.ui.pages.CheckoutPaymentPageDef"/>
+    <page id="oracle_fod_storefront_ui_CheckoutConfirmPageDef"
+          path="oracle.storefront.ui.pages.CheckoutConfirmPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="FODProductAMDataControl" Package="oracle.fod.storefront.module"

@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">shop</property>
       <property
-         name="sdm:polyPoints">R46,218.0,240.0459,326.0,239.24707,L50</property>
+         name="sdm:polyPoints">R45,218.5,239.5459,325.5,239.24707,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn5">
@@ -67,7 +67,7 @@
       <property
          name="fromOutcome">checkout</property>
       <property
-         name="sdm:polyPoints">R54,218.0,247.0459,322.5,348.39648,L50</property>
+         name="sdm:polyPoints">R55,218.5,247.5459,322.0,348.39648,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall8">
@@ -92,6 +92,6 @@
       <property
          name="fromOutcome">init</property>
       <property
-         name="sdm:polyPoints">R50,98.5,243.69531,136.0,243.5459,L50</property>
+         name="sdm:polyPoints">R50,99.0,243.69531,135.5,243.5459,L50</property>
    </ControlFlowCase>
 </SDM>

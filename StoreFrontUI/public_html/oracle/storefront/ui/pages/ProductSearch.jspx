@@ -6,7 +6,7 @@
         <af:document title="ProductSearch.jspx" id="d1">
             <af:messages id="m1"/>
             <af:form id="f1">
-                        <af:panelGroupLayout layout="vertical" id="pgl1">
+                        <af:panelGroupLayout layout="scroll" id="pgl1">
                 <af:panelHeader text="BrowseProducts" id="ph1">
                     <af:query id="qryId1" headerText="Search" disclosed="true"
                               value="#{bindings.SearchByNameQuery.queryDescriptor}"
@@ -19,7 +19,7 @@
                           rows="#{bindings.BrowseProducts.rangeSize}"
                           emptyText="#{bindings.BrowseProducts.viewable ? 'No data to display.' : 'Access Denied.'}"
                           rowBandingInterval="0" fetchSize="#{bindings.BrowseProducts.rangeSize}" id="resultTable"
-                          partialTriggers="l1">
+                          partialTriggers="l1" width="100%" columnStretching="last">
                         <af:column headerText="#{bindings.BrowseProducts.hints.ProductName.label}" id="resId1c1">
                             <af:link id="l1" actionListener="#{bindings.setCurrentRowWithKey.execute}"
                                      disabled="#{!bindings.setCurrentRowWithKey.enabled}" action="detail">

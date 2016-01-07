@@ -10,7 +10,7 @@
                           emptyText="#{bindings.Supplier1.viewable ? 'No data to display.' : 'Access Denied.'}"
                           rowBandingInterval="0" selectedRowKeys="#{bindings.Supplier1.collectionModel.selectedRow}"
                           selectionListener="#{bindings.Supplier1.collectionModel.makeCurrent}" rowSelection="single"
-                          fetchSize="#{bindings.Supplier1.rangeSize}" id="t1">
+                          fetchSize="#{bindings.Supplier1.rangeSize}" id="t1" width="100%" columnStretching="last">
                     <af:column sortProperty="#{bindings.Supplier1.hints.SupplierName.name}" sortable="true"
                                headerText="#{bindings.Supplier1.hints.SupplierName.label}" id="c1">
                         <af:outputText value="#{row.SupplierName}"
