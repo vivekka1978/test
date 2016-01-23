@@ -16,6 +16,65 @@
     Name="PersonId"
     Kind="viewcriteria"
     Type="oracle.jbo.domain.Number"/>
+  <ViewAccessor
+    Name="LookupCodeVVO1"
+    ViewObjectName="oracle.fod.storefront.view.LookupCodeVVO"
+    RowLevelBinds="false">
+    <ParameterMap>
+      <PIMap Variable="BindLookupType">
+        <TransientExpression
+          trustMode="untrusted"><![CDATA['PAYMENT_TYPE_CODE']]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="LookupCodeVVO2"
+    ViewObjectName="oracle.fod.storefront.view.LookupCodeVVO"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="BindLookupType">
+        <TransientExpression
+          trustMode="untrusted"><![CDATA['CARD_TYPE_CODE']]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ListBinding
+    Name="LOV_PaymentTypeCode"
+    ListVOName="LookupCodeVVO1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PaymentTypeCode"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupCode"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Meaning"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CardTypeCode"
+    ListVOName="LookupCodeVVO2"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CardTypeCode"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LookupCode"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Meaning"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <SQLQuery><![CDATA[SELECT PaymentOptions.PAYMENT_OPTION_ID, 
        PaymentOptions.CUSTOMER_ID, 
        PaymentOptions.PAYMENT_TYPE_CODE, 
@@ -71,10 +130,17 @@ FROM PAYMENT_OPTIONS PaymentOptions]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="PAYMENT_TYPE_CODE"
     Expression="PAYMENT_TYPE_CODE"
-    SQLType="VARCHAR">
+    SQLType="VARCHAR"
+    LOVName="LOV_PaymentTypeCode">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="BillingAddressId"
@@ -109,10 +175,17 @@ FROM PAYMENT_OPTIONS PaymentOptions]]></SQLQuery>
     ColumnType="VARCHAR2"
     AliasName="CARD_TYPE_CODE"
     Expression="CARD_TYPE_CODE"
-    SQLType="VARCHAR">
+    SQLType="VARCHAR"
+    LOVName="LOV_CardTypeCode">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="ExpireDate"

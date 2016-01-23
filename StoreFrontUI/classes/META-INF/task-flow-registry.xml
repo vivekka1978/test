@@ -1,4 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
+   <task-flow-descriptor path="oracle/storefront/ui/flow/ShowSuppliersFlow.xml" id="ShowSuppliersFlow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="oracle/storefront/ui/flow/ManageSupplierFlow.xml" id="ManageSupplierFlow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="oracle/storefront/ui/flow/ShoppingFlow.xml" id="ShoppingFlow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
    <task-flow-descriptor path="oracle/storefront/ui/flow/CheckoutFlow.xml" id="CheckoutFlow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="true" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="META-INF/adfc-config.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="oracle/storefront/ui/flow/ShoppingCartFlow.xml" id="ShoppingCartFlow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="oracle/storefront/ui/flow/testflow.xml" id="testflow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="unspecified"/>
 </task-flow-registry>

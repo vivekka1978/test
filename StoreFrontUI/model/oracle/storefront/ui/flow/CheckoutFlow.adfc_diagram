@@ -141,9 +141,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">327.44824</property>
+         name="y">326.09766</property>
       <property
-         name="x">-65.5</property>
+         name="x">-80.5</property>
    </MethodCall>
    <ControlFlowCase
       islink="true"
@@ -153,6 +153,6 @@
       <property
          name="fromOutcome">init</property>
       <property
-         name="sdm:polyPoints">R50,-24.5,327.09766,77.0,324.14355,L50</property>
+         name="sdm:polyPoints">R50,-39.5,325.74707,77.0,324.14355,L50</property>
    </ControlFlowCase>
 </SDM>

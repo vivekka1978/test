@@ -64,22 +64,20 @@
                         <f:facet name="legend"/>
                         <f:facet name="info"/>
                         <af:panelFormLayout id="pfl2">
-                            <af:inputText value="#{bindings.PaymentTypeCode.inputValue}"
-                                          label="#{bindings.PaymentTypeCode.hints.label}"
-                                          required="#{bindings.PaymentTypeCode.hints.mandatory}"
-                                          columns="#{bindings.PaymentTypeCode.hints.displayWidth}"
-                                          maximumLength="#{bindings.PaymentTypeCode.hints.precision}"
-                                          shortDesc="#{bindings.PaymentTypeCode.hints.tooltip}" id="it6">
-                                <f:validator binding="#{bindings.PaymentTypeCode.validator}"/>
-                            </af:inputText>
-                            <af:inputText value="#{bindings.CardTypeCode.inputValue}"
-                                          label="#{bindings.CardTypeCode.hints.label}"
-                                          required="#{bindings.CardTypeCode.hints.mandatory}"
-                                          columns="#{bindings.CardTypeCode.hints.displayWidth}"
-                                          maximumLength="#{bindings.CardTypeCode.hints.precision}"
-                                          shortDesc="#{bindings.CardTypeCode.hints.tooltip}" id="it7">
-                                <f:validator binding="#{bindings.CardTypeCode.validator}"/>
-                            </af:inputText>
+                            <af:selectOneChoice value="#{bindings.PaymentTypeCode1.inputValue}"
+                                                label="#{bindings.PaymentTypeCode1.label}"
+                                                required="#{bindings.PaymentTypeCode1.hints.mandatory}"
+                                                shortDesc="#{bindings.PaymentTypeCode1.hints.tooltip}" id="soc2">
+                                <f:selectItems value="#{bindings.PaymentTypeCode1.items}" id="si2"/>
+                                <f:validator binding="#{bindings.PaymentTypeCode1.validator}"/>
+                            </af:selectOneChoice>
+                            <af:selectOneChoice value="#{bindings.CardTypeCode1.inputValue}"
+                                                label="#{bindings.CardTypeCode1.label}"
+                                                required="#{bindings.CardTypeCode1.hints.mandatory}"
+                                                shortDesc="#{bindings.CardTypeCode1.hints.tooltip}" id="soc1">
+                                <f:selectItems value="#{bindings.CardTypeCode1.items}" id="si1"/>
+                                <f:validator binding="#{bindings.CardTypeCode1.validator}"/>
+                            </af:selectOneChoice>
                             <af:inputText value="#{bindings.AccountNumber.inputValue}"
                                           label="#{bindings.AccountNumber.hints.label}"
                                           required="#{bindings.AccountNumber.hints.mandatory}"

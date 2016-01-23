@@ -91,7 +91,7 @@
       </AppModuleConfig>
    </AppModuleConfigBag>
    <AppModuleConfigBag ApplicationName="oracle.fod.storefront.module.FODCheckoutAM">
-      <AppModuleConfig name="151B8BAB81E" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODCheckoutAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODCheckoutAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
+      <AppModuleConfig name="1526CD4FAA0" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/fodDS" ApplicationName="oracle.fod.storefront.module.FODCheckoutAM" jbo.project="oracle.fod.storefront.StoreFrontModel" BC4JConfigName="FODCheckoutAMLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="fod">
          <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="OracleApps" jbo.locking.mode="optimistic"/>
          <Security AppModuleJndiName="oracle.fod.storefront.module.FODCheckoutAM"/>
          <Tester FullProxyInterfaceName="oracle.fod.storefront.module.common.FODCheckoutAM"/>
