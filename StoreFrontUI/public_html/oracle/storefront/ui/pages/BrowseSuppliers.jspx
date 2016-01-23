@@ -12,12 +12,12 @@
                           selectionListener="#{bindings.Supplier1.collectionModel.makeCurrent}" rowSelection="single"
                           fetchSize="#{bindings.Supplier1.rangeSize}" id="t1" width="100%" columnStretching="last">
                     <af:column sortProperty="#{bindings.Supplier1.hints.SupplierName.name}" sortable="true"
-                               headerText="#{bindings.Supplier1.hints.SupplierName.label}" id="c1">
+                               headerText="#{bindings.Supplier1.hints.SupplierName.label}" id="c1" width="100">
                         <af:outputText value="#{row.SupplierName}"
                                        shortDesc="#{bindings.Supplier1.hints.SupplierName.tooltip}" id="ot1"/>
                     </af:column>
                     <af:column sortProperty="#{bindings.Supplier1.hints.SupplierId.name}" sortable="true"
-                               headerText="#{bindings.Supplier1.hints.SupplierId.label}" id="c2">
+                               headerText="#{bindings.Supplier1.hints.SupplierId.label}" id="c2" width="101">
                         <af:link id="l1" action="update">
                             <af:outputText value="#{row.SupplierId}"
                                            shortDesc="#{bindings.Supplier1.hints.SupplierId.tooltip}" id="ot2">
@@ -27,17 +27,17 @@
                         </af:link>
                     </af:column>
                     <af:column sortProperty="#{bindings.Supplier1.hints.Email.name}" sortable="true"
-                               headerText="#{bindings.Supplier1.hints.Email.label}" id="c3">
+                               headerText="#{bindings.Supplier1.hints.Email.label}" id="c3" width="99">
                         <af:outputText value="#{row.Email}" shortDesc="#{bindings.Supplier1.hints.Email.tooltip}"
                                        id="ot3"/>
                     </af:column>
                     <af:column sortProperty="#{bindings.Supplier1.hints.PhoneNumber.name}" sortable="true"
-                               headerText="#{bindings.Supplier1.hints.PhoneNumber.label}" id="c4">
+                               headerText="#{bindings.Supplier1.hints.PhoneNumber.label}" id="c4" width="100">
                         <af:outputText value="#{row.PhoneNumber}"
                                        shortDesc="#{bindings.Supplier1.hints.PhoneNumber.tooltip}" id="ot4"/>
                     </af:column>
                     <af:column sortProperty="#{bindings.Supplier1.hints.SupplierStatus.name}" sortable="true"
-                               headerText="#{bindings.Supplier1.hints.SupplierStatus.label}" id="c5">
+                               headerText="#{bindings.Supplier1.hints.SupplierStatus.label}" id="c5" width="100">
                         <af:outputText value="#{row.SupplierStatus}"
                                        shortDesc="#{bindings.Supplier1.hints.SupplierStatus.tooltip}" id="ot5"/>
                     </af:column>

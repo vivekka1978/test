@@ -3,7 +3,7 @@
   <task-flow-definition id="CheckoutFlow">
     <default-activity>init</default-activity>
     <data-control-scope>
-      <shared/>
+      <shared/> 
     </data-control-scope>
     <view id="CheckoutShipping">
       <page>/oracle/storefront/ui/pages/CheckoutShipping.jsf</page>
